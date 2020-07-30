@@ -1,11 +1,6 @@
-
-![images](images/1.jpg)
-![](images/5.png)
-![](5.png)
-
-![Alt text](relative/path/to/img.jpg?raw=true "Title")
-
-![Screenshot](screenshot.png)
-
-<img src="images/5.png" width="800" />
+![](images/1.JPG)
+![](images/2.JPG)
+![](images/3.JPG)
+![](images/4.JPG)
+![](images/5.JPG)
 
