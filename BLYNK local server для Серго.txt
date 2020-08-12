@@ -1,0 +1,44 @@
+
+sudo apt update && sudo apt full-upgrade && sudo apt autoremove && sudo apt autoclean && sudo apt clean
+
+sudo reboot
+
+---------Установка JAVA--------------------
+
+sudo add-apt-repository ppa:openjdk-r/ppa 
+&& sudo apt-get update 
+&& sudo apt install -y openjdk-11-jdk 
+&& sudo apt-get install libxrender1 
+&& java -version
+
+---------Установка blynk ----------------------
+uuser - можешь иначе назвать пользователя
+
+
+cd /home/uuser 
+&& sudo mkdir blynk 
+&& cd blynk 
+&& sudo mkdir data 
+&& sudo wget "https://github.com/blynkkk/blynk-server/releases/download/v0.41.10/server-0.41.10.jar" 
+&& sudo mv server-0.41.10.jar blynk-server.jar 
+&& ls
+
+wget "https://raw.githubusercontent.com/blynkkk/blynk-server/master/server/core/src/main/resources/server.properties"
+
+------Нужно настроить пароли админа-------------
+
+sudo nano server.properties
+
+----Чтобы сервер запускался автоматически----
+
+sudo crontab -e
+
+@reboot java -jar /home/uuser/blynk/blynk-server.jar -dataFolder /home/uuser/blynk/data -serverConfig /home/uuser/blynk/server.properties 
+
+sudo reboot
+
+----------Вход в панель администратора производится через web интерфейс, по ссылке:------------------
+
+https://your_ip:9443/admin
+
+
